@@ -1,0 +1,122 @@
+[
+    {
+        "arguments": {
+            "cram.inputBam": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/cram/input_data/PCSI0022C.val.bam",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "cram.outputFileNamePrefix: "PCSI0022C",
+            "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
+            "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
+            "cram.bamToCram.addParam": null,
+            "cram.bamToCram.jobMemory": null,
+            "cram.bamToCram.timeout": null,
+            "cram.cramToBam.modules": "samtools/1.9 hg19/p13",
+            "cram.cramToBam.referenceFasta":"$HG19_ROOT/hg19_random.fa",
+            "cram.cramToBam.addParam": null,
+            "cram.cramToBam.jobMemory": null,
+            "cram.cramToBam.timeout": null
+        },
+        "description": "convert PCSI_0022 bam to cram.",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+
+        "id": "PCSI0022C_bam_to_cram",
+        "metadata": {
+            "cram.outputCram": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "cram.outputCramIndex": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/cram/1.0/output_metrics/PCSI0022C_bam_to_cram.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "cram.inputCram": {
+                "contents": {
+                    "configuration": "/.mounts/labs/gsi/testdata/cram/input_data/PCSI0022C.val.cram",
+                    "externalIds": [
+                        {
+                            "id": "TEST",
+                            "provider": "TEST"
+                        }
+                    ]
+                },
+                "type": "EXTERNAL"
+            },
+            "cram.outputFileNamePrefix: "PCSI0022C",
+            "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
+            "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
+            "cram.bamToCram.addParam": null,
+            "cram.bamToCram.jobMemory": null,
+            "cram.bamToCram.timeout": null,
+            "cram.cramToBam.modules": "samtools/1.9 hg19/p13",
+            "cram.cramToBam.referenceFasta":"$HG19_ROOT/hg19_random.fa",
+            "cram.cramToBam.addParam": null,
+            "cram.cramToBam.jobMemory": null,
+            "cram.cramToBam.timeout": null
+        },
+        "description": "convert PCSI_0022 cram to bam.",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+
+        "id": "PCSI0022C_cram_to_bam",
+        "metadata": {
+            "cram.outputBam": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "cram.outputBamIndex": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/cram/1.0/output_metrics/PCSI0022C_cram_to_bam.metrics",
+                "type": "script"
+            }
+        ]
+    }    
+]
