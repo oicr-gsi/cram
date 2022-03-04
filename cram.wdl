@@ -35,6 +35,7 @@ workflow cram {
   parameter_meta {
     inputBam: "optional input bam file that will be converted to cram file"
     inputCram: "optional input cram file that will be converted to bam file"
+    outputFileNamePrefix: "Prefix for output file"
   }
 
   meta {
@@ -91,11 +92,12 @@ task bamToCram {
 
   parameter_meta {
     inputBam: "Input bam file"
-    outputFileNamePrefix: "Output prefix to prefix output file names with."
-    jobMemory: "Memory (in GB) to allocate to the job."
+    outputFileNamePrefix: "Output prefix to prefix output file names with"
+    jobMemory: "Memory (in GB) to allocate to the job"
     referenceFasta: "The fasta that is being used as a refrence to build the cram file"
-    modules: "Modules required to process this step."
+    modules: "Modules required to process this step"
     timeout: "Hours before task timeout"
+    addParam: "additional parameters"
   }
 
   meta {
@@ -145,11 +147,12 @@ task cramToBam {
 
   parameter_meta {
     inputCram: "Input Cram file"
-    outputFileNamePrefix: "Output prefix to prefix output file names with."
-    jobMemory: "Memory (in GB) to allocate to the job."
+    outputFileNamePrefix: "Output prefix to prefix output file names with"
+    jobMemory: "Memory (in GB) to allocate to the job"
     referenceFasta: "The fasta that is being used as a refrence to build the bam file"
-    modules: "Modules required to process this step."
+    modules: "Modules required to process this step"
     timeout: "Hours before task timeout"
+    addParam: "additional parameters"
   }
 
   meta {
