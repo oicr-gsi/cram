@@ -49,7 +49,23 @@
                     }
                 ],
                 "type": "ALL"
-            }
+            },
+             "cram.outputBam": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "cram.outputBamIndex": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }           
         },
         "validators": [
             {
@@ -95,6 +111,22 @@
 
         "id": "PCSI0022C_cram_to_bam",
         "metadata": {
+            "cram.outputCram": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "cram.outputCramIndex": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
             "cram.outputBam": {
                 "contents": [
                     {
