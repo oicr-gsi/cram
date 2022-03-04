@@ -13,6 +13,7 @@
                 },
                 "type": "EXTERNAL"
             },
+            "cram.inputCram": null,
             "cram.outputFileNamePrefix": "PCSI0022C",
             "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
             "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
@@ -73,6 +74,7 @@
                 },
                 "type": "EXTERNAL"
             },
+            "cram.inputBam": null,
             "cram.outputFileNamePrefix": "PCSI0022C",
             "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
             "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
