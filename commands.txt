@@ -1,0 +1,29 @@
+## Commands
+This section lists command(s) run by WORKFLOW workflow
+
+* Running WORKFLOW
+
+=== Description here ===.
+
+<<<
+    set -euo pipefail
+
+    #convert bam to cram
+    samtools view -C -T ~{referenceFasta} ~{addParam} -o ~{resultCram} ~{inputBam}
+
+    # index cram
+    samtools index ~{resultCram} ~{resultCramIndex}
+
+
+  >>>
+<<<
+    set -euo pipefail
+
+    #convert cram to bam
+    samtools view -b -T ~{referenceFasta} ~{addParam} -o ~{resultBam} ~{inputCram}
+
+    # index bam
+    samtools index ~{resultBam} ~{resultBamIndex}
+
+
+  >>>
