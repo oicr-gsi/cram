@@ -47,7 +47,7 @@ workflow cram {
       }
     ]
     output_meta: {
-      outputAlign: "output alignment file"
+      outputAlign: "output alignment file",
       outputIndex: "output alignment index file"
     }    
   }
