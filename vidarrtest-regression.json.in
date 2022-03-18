@@ -1,7 +1,7 @@
 [
     {
         "arguments": {
-            "cram.inputBam": {
+            "cram.inputAlign": {
                 "contents": {
                     "configuration": "/.mounts/labs/gsi/testdata/cram/input_data/PCSI0022C.val.bam",
                     "externalIds": [
@@ -13,7 +13,7 @@
                 },
                 "type": "EXTERNAL"
             },
-            "cram.inputCram": null,
+            "cram.isBam": true,
             "cram.outputFileNamePrefix": "PCSI0022C",
             "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
             "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
@@ -31,10 +31,9 @@
             "write_to_cache": false,
             "read_from_cache": false
         },
-
         "id": "PCSI0022C_bam_to_cram",
         "metadata": {
-            "cram.outputCram": {
+            "cram.outputAlign": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
@@ -42,26 +41,10 @@
                 ],
                 "type": "ALL"
             },
-            "cram.outputCramIndex": {
+            "cram.outputIndex": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
-                    }
-                ],
-                "type": "ALL"
-            },
-             "cram.outputBam": {
-                "contents": [
-                    {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
-                    }
-                ],
-                "type": "ALL"
-            },
-            "cram.outputBamIndex": {
-                "contents": [
-                    {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -78,7 +61,7 @@
     },
     {
         "arguments": {
-            "cram.inputCram": {
+            "cram.inputAlign": {
                 "contents": {
                     "configuration": "/.mounts/labs/gsi/testdata/cram/input_data/PCSI0022C.val.cram",
                     "externalIds": [
@@ -90,7 +73,7 @@
                 },
                 "type": "EXTERNAL"
             },
-            "cram.inputBam": null,
+            "cram.isBam": false,
             "cram.outputFileNamePrefix": "PCSI0022C",
             "cram.bamToCram.modules": "samtools/1.9 hg19/p13",
             "cram.bamToCram.referenceFasta":"$HG19_ROOT/hg19_random.fa",
@@ -108,26 +91,9 @@
             "write_to_cache": false,
             "read_from_cache": false
         },
-
         "id": "PCSI0022C_cram_to_bam",
         "metadata": {
-            "cram.outputCram": {
-                "contents": [
-                    {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
-                    }
-                ],
-                "type": "ALL"
-            },
-            "cram.outputCramIndex": {
-                "contents": [
-                    {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_bam_to_cram_@JENKINSID@"
-                    }
-                ],
-                "type": "ALL"
-            },
-            "cram.outputBam": {
+            "cram.outputAlign": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
@@ -135,7 +101,7 @@
                 ],
                 "type": "ALL"
             },
-            "cram.outputBamIndex": {
+            "cram.outputIndex": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_cram_PCSI0022C_cram_to_bam_@JENKINSID@"
