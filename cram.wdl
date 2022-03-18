@@ -2,39 +2,36 @@ version 1.0
 
 workflow cram {
   input {
-    File? inputBam
-    File? inputCram
+    File inputAlign
+    Boolean isBam
     String outputFileNamePrefix = "output"
   }
 
-  if (defined(inputBam) == true) {
+  if (isBam) {
     call bamToCram {
       input:
-        inputBam = inputBam,
+        inputBam = inputAlign,
         outputFileNamePrefix = outputFileNamePrefix
 
     }
   }
-  if (defined(inputCram) == true) {
+  if (!isBam) {
     call cramToBam {
       input:
-        inputCram = inputCram,
+        inputCram = inputAlign,
         outputFileNamePrefix = outputFileNamePrefix
     }
   }
 
    output {
-        File? outputBam = cramToBam.outputBam
-        File? outputBamIndex = cramToBam.outputBamIndex
-        File? outputCram = bamToCram.outputCram
-        File? outputCramIndex = bamToCram.outputCramIndex
-
+        File outputAlign = select_first([bamToCram.outputCram, cramToBam.outputBam])
+        File outputIndex = select_first([bamToCram.outputCramIndex, cramToBam.outputBamIndex])
     }
 
 
   parameter_meta {
-    inputBam: "optional input bam file that will be converted to cram file"
-    inputCram: "optional input cram file that will be converted to bam file"
+    inputAlign: "input alignment file that will be converted to cram file"
+    isBam: "is the input a bam"
     outputFileNamePrefix: "Prefix for output file"
   }
 
@@ -49,13 +46,17 @@ workflow cram {
       url: "https://github.com/samtools/samtools"
       }
     ]
+    output_meta: {
+      outputAlign: "output alignment file"
+      outputIndex: "output alignment index file"
+    }    
   }
 }
 
 
 task bamToCram {
   input{
-    File? inputBam
+    File inputBam
     String outputFileNamePrefix
     Int jobMemory = 12
     Int timeout = 5
@@ -110,7 +111,7 @@ task bamToCram {
 
 task cramToBam {
   input{
-    File? inputCram
+    File inputCram
     String outputFileNamePrefix
     Int jobMemory = 12
     Int timeout = 5
