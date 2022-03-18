@@ -21,7 +21,7 @@ java -jar cromwell.jar run cram.wdl --inputs inputs.json
 #### Required workflow parameters:
 Parameter|Value|Description
 ---|---|---
-`inputAlign`|File|input alignment file that will be converted to cram file
+`inputAlign`|File|input alignment file that will be converted to cram or bam file
 `isBam`|Boolean|is the input a bam
 
 
@@ -55,11 +55,11 @@ Output | Type | Description
 
 
 ## Commands
- This section lists command(s) run by WORKFLOW workflow
+ This section lists command(s) run by cram workflow
  
- * Running WORKFLOW
+ * Running cram
  
- === Description here ===.
+ This workflow converts cram to bam or bam to cram
  
  <<<
      set -euo pipefail

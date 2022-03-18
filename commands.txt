@@ -1,9 +1,9 @@
 ## Commands
-This section lists command(s) run by WORKFLOW workflow
+This section lists command(s) run by cram workflow
 
-* Running WORKFLOW
+* Running cram
 
-=== Description here ===.
+This workflow converts cram to bam or bam to cram
 
 <<<
     set -euo pipefail

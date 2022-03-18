@@ -30,7 +30,7 @@ workflow cram {
 
 
   parameter_meta {
-    inputAlign: "input alignment file that will be converted to cram file"
+    inputAlign: "input alignment file that will be converted to cram or bam file"
     isBam: "is the input a bam"
     outputFileNamePrefix: "Prefix for output file"
   }
