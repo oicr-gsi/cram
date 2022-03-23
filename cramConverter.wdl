@@ -1,6 +1,6 @@
 version 1.0
 
-workflow cram {
+workflow cramConverter {
   input {
     File inputAlign
     Boolean isBam

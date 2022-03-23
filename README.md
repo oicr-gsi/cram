@@ -1,4 +1,4 @@
-# cram
+# cramConverter
 
 Workflow for converting cram to bam or bam to cram
 
@@ -13,7 +13,7 @@ Workflow for converting cram to bam or bam to cram
 
 ### Cromwell
 ```
-java -jar cromwell.jar run cram.wdl --inputs inputs.json
+java -jar cromwell.jar run cramConverter.wdl --inputs inputs.json
 ```
 
 ### Inputs
@@ -55,7 +55,7 @@ Output | Type | Description
 
 
 ## Commands
- This section lists command(s) run by cram workflow
+ This section lists command(s) run by cramConverter workflow
  
  * Running cram
  
