@@ -1,0 +1,6 @@
+{
+    "names": [
+        "cramConverter"
+    ],
+    "wdl": "cramConverter.wdl"
+}
