@@ -48,10 +48,10 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`outputAlign`|File|output alignment file
-`outputIndex`|File|output alignment index file
+Output | Type | Description | Labels
+---|---|---|---
+`outputAlign`|File|output alignment file|vidarr_label: outputAlign
+`outputIndex`|File|output alignment index file|vidarr_label: outputIndex
 
 
 ## Commands
@@ -61,7 +61,9 @@ Output | Type | Description
  
  This workflow converts cram to bam or bam to cram
  
- <<<
+ ### BAM to CRAM
+ 
+ ```
      set -euo pipefail
  
      #convert bam to cram
@@ -71,8 +73,11 @@ Output | Type | Description
      samtools index ~{resultCram} ~{resultCramIndex}
  
  
-   >>>
- <<<
+ ```
+ 
+ ## CRAM to BAM
+ 
+ ```
      set -euo pipefail
  
      #convert cram to bam
@@ -82,7 +87,7 @@ Output | Type | Description
      samtools index ~{resultBam} ~{resultBamIndex}
  
  
-   >>>
+ ```
  ## Support
 
 For support, please file an issue on the [Github project](https://github.com/oicr-gsi) or send an email to gsi@oicr.on.ca .

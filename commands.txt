@@ -5,7 +5,9 @@ This section lists command(s) run by cramConverter workflow
 
 This workflow converts cram to bam or bam to cram
 
-<<<
+### BAM to CRAM
+
+```
     set -euo pipefail
 
     #convert bam to cram
@@ -15,8 +17,11 @@ This workflow converts cram to bam or bam to cram
     samtools index ~{resultCram} ~{resultCramIndex}
 
 
-  >>>
-<<<
+```
+
+## CRAM to BAM
+
+```
     set -euo pipefail
 
     #convert cram to bam
@@ -26,4 +31,4 @@ This workflow converts cram to bam or bam to cram
     samtools index ~{resultBam} ~{resultBamIndex}
 
 
-  >>>
+```
