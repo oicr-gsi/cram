@@ -47,9 +47,15 @@ workflow cramConverter {
       }
     ]
     output_meta: {
-      outputAlign: "output alignment file",
-      outputIndex: "output alignment index file"
-    }    
+    outputAlign: {
+        description: "output alignment file",
+        vidarr_label: "outputAlign"
+    },
+    outputIndex: {
+        description: "output alignment index file",
+        vidarr_label: "outputIndex"
+    }
+}
   }
 }
 
